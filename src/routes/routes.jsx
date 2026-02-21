@@ -1,44 +1,48 @@
-import { createrowerRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../components/layout/Root";
+import Home from "../components/pages/HeroSection";
+import Products from "../components/pages/Products";
+import Logs from "../components/pages/Logs";
+import Contact from "../components/pages/contact";
+import About from "../components/pages/about";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/register";
 
-const router = createrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
-        component: <Root />,
+        Component: Root,
         children: [
             {
                 index: true,
                 Component: Home,
-
             },
             {
                 path: 'products',
-                component: products
+                Component: Products
             },
             {
                 path: 'logs',
-                component: logs
+                Component: Logs
             },
             {
                 path: 'contact',
-                component: contact
+                Component: Contact
             },
-            path: 'Aout',
-            component: component
-        },
-    {
-        path: 'login'
-            component: Login,
-    },
-    {
-        path; 'register'
-            component: Register
-
-    }
-
-]
+            {
+                path: 'about',
+                Component: About
+            },
+            {
+                path: 'login',
+                Component: Login
+            },
+            {
+                path: 'register',
+                Component: Register
+            }
         ]
     }
 ]);
 
-export defaultn //router
+export default router;

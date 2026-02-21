@@ -1,14 +1,11 @@
 import "./App.css";
-import Root from "./components/layout/Root";
-import Navbar from "./components/shared/Navbar";
-import HeroSection from "./components/pages/HeroSection";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Root />
-      <HeroSection />
+    <div className="app-container">
+      <RouterProvider router={router} />
     </div>
   );
 }
